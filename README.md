@@ -156,9 +156,10 @@ And no one could fix this...
 ## Fix
 
 But I came up with simple, straightforward strategy: I added just one **more** condition to my code for every member of triple:
-
+```
 (!(myMap[currentElement] > myMap[{here is one member of triple}] || \
                         myMap[currentElement] > myMap[{here is another member of triple}]
+```
 In that way, this condition guarantees the sum becomes smaller AND the occurrences number of all the elements in the triple IS NOT SMALLER than the current member has.
             
 And eventually, it worked ***perfectly***. The Grok's reaction was this:
