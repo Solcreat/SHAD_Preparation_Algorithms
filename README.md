@@ -21,9 +21,7 @@ $x_1, x_2, x_3$
 such that the **total number of their occurrences** in the array is maximized.
 
 If there are several suitable triples $(x_1, x_2, x_3)$, output the triple with the **minimum sum**
-$$
-x_1 + x_2 + x_3.
-$$
+$$ x_1 + x_2 + x_3.$$
 
 It is guaranteed that the array contains at least three distinct elements.
 
@@ -34,22 +32,16 @@ It is guaranteed that the array contains at least three distinct elements.
 The first line contains a single integer $n$, the number of elements in the array.
 
 The second line contains $n$ integers  
-$$
-a_1, a_2, \dots, a_n,
-$$
+$$a_1, a_2, \dots, a_n,$$
 where $a_i$ is the element at position $i$ in the array $a$.
 
 ---
 
 ## Constraints
 
-$$
-1 \le n \le 10^5
-$$
+$$1 \le n \le 10^5$$
 
-$$
-1 \le a_i \le 10^5 \quad \text{for all } 1 \le i \le n
-$$
+$$1 \le a_i \le 10^5 \quad \text{for all } 1 \le i \le n$$
 
 ---
 
@@ -69,14 +61,8 @@ separated by spaces and printed in **increasing order**.
 6
 1 2 3 2 1 1
 
-markdown
-Copy code
-
 **Output**
 1 2 3
-
-yaml
-Copy code
 
 ---
 
@@ -86,14 +72,8 @@ Copy code
 6
 3 1 1 2 3 3
 
-markdown
-Copy code
-
 **Output**
 1 2 3
-
-yaml
-Copy code
 
 ---
 
@@ -102,10 +82,6 @@ Copy code
 **Input**
 8
 11 21 31 41 31 41 11 21
-
-markdown
-Copy code
-
 **Output**
 11 21 31
 
