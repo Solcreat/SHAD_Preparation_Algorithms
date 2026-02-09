@@ -95,12 +95,12 @@ separated by spaces and printed in **increasing order**.
 
 11 21 31
 
-
-And when it was broken (there was one more, not-so-obvious condition missing) No LLM could help me: 
+## Why the greedy algorithm broke at first
+When it was broken (there was one more, not-so-obvious condition missing) No LLM could help me: 
 ChatGPT 5.1, Grok 4.1, Gemini 2.5, Gemini 3.0 Pro, Kimi
 They all told me that it can't be solved that way. That the "global optimum" can't be always reached by local interchanges and that is why it failed WA (Wrong Answer) at test 10. But, after many hours of debugging and testing my code by LLM-written test generator (Grok just approached the problem by brute-forcing (it anyway failed at test 35 WA) and popped some code for me to compare the differences in outputs), I **found** the weakness of my code.
 
-At the test like:
+## Counterexample
 
 11
 
@@ -114,7 +114,7 @@ My code returned
 
 3 4 5
 
-Because it worked in that way:
+## How the problem arose
 
 First, the triple will be:
 
@@ -143,7 +143,7 @@ When $currentElement = 4$, the program quite logically replaces $5$ with $4$, si
 
 However, when $5$ appears one more time (now it has two occurrences, just like 8 and 3), the program no longer replaces 4 in order to make the total number of occurrences equal to
 
-$2+2+2=6$,
+$$2+2+2=6$$,
 
 but instead replaces $8$, which is the largest value and also has two occurrences.
 
@@ -152,6 +152,8 @@ So $8$ gets replaced.
 That is, in this kind of situation, the sum of occurrences is NOT being maximized.
 
 And no one could fix this...
+
+## Fix
 
 But I came up with simple, straightforward strategy: I added just one **more** condition to my code for every member of triple:
 
@@ -410,13 +412,12 @@ $$2 + 2 + 2 = 6$$
 
 То есть в такой ситуации **сумма вхождений не максимизировалась**.
 
+И никто не мог это починить…
 ---
 
 ## Исправление
 
-Никто не мог это починить…
-
-Но я придумал простую и прямолинейную стратегию:  
+Однако я пришел к простой и прямолинейной стратегии:  
 я добавил всего **одно дополнительное условие** для каждого элемента тройки:
 
 ```
