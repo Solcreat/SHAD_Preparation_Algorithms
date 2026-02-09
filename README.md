@@ -58,11 +58,13 @@ separated by spaces and printed in **increasing order**.
 ### Example 1
 
 **Input**
+
 6
 
 1 2 3 2 1 1
 
 **Output**
+
 1 2 3
 
 ---
@@ -70,11 +72,13 @@ separated by spaces and printed in **increasing order**.
 ### Example 2
 
 **Input**
+
 6
 
 3 1 1 2 3 3
 
 **Output**
+
 1 2 3
 
 ---
@@ -82,6 +86,7 @@ separated by spaces and printed in **increasing order**.
 ### Example 3
 
 **Input**
+
 8
 
 11 21 31 41 31 41 11 21
